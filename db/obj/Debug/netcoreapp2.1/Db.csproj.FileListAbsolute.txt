@@ -1,0 +1,6 @@
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\bin\Debug\netcoreapp2.1\Db.deps.json
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\bin\Debug\netcoreapp2.1\Db.dll
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.csprojAssemblyReference.cache
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.csproj.CoreCompileInputs.cache
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.AssemblyInfoInputs.cache
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.AssemblyInfo.cs

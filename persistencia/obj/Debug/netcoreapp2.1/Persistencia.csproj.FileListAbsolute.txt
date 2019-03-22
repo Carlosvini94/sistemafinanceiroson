@@ -1,0 +1,5 @@
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.deps.json
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.dll
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfoInputs.cache
+C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfo.cs
