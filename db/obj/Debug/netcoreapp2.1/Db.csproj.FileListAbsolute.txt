@@ -4,3 +4,12 @@ C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.
 C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.csproj.CoreCompileInputs.cache
 C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.AssemblyInfoInputs.cache
 C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.AssemblyInfo.cs
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\bin\Debug\netcoreapp2.1\Db.deps.json
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\bin\Debug\netcoreapp2.1\Db.dll
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\bin\Debug\netcoreapp2.1\Db.pdb
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.csprojAssemblyReference.cache
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.AssemblyInfoInputs.cache
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.AssemblyInfo.cs
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.dll
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Db\obj\Debug\netcoreapp2.1\Db.pdb

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Modelo
 {
-    class Contas
+    public class Conta
     {
         private int? _id;
         private string _descricao;
-        private char _tipo;
+        private string _tipo;
         private double _valor;
         private DateTime _data_vencimento;
         private Categoria _categoria;
@@ -17,9 +17,9 @@ namespace Modelo
         public string Descricao { get; set; }
         public double Valor { get; set; }
 
-        public char Tipo {
+        public string Tipo {
             get => _tipo;
-            set => _tipo = !value.Equals('P') && !value.Equals('R') ? throw new Exception("Use P para pagar e R para receber") : value;
+            set => _tipo = !value.Equals("P") && !value.Equals("R") ? throw new Exception("Use P para pagar e R para receber") : value;
         }
 
         public DateTime DataVencimento { get; set; }

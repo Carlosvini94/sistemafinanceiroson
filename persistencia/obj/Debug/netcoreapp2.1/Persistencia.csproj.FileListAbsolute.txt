@@ -3,3 +3,17 @@ C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\bin\Debug\ne
 C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfoInputs.cache
 C:\Users\10043718612\source\repos\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfo.cs
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.deps.json
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.dll
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.pdb
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Db.dll
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Modelo.dll
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Db.pdb
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Modelo.pdb
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csprojAssemblyReference.cache
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfoInputs.cache
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfo.cs
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CopyComplete
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.dll
+C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.pdb
