@@ -42,16 +42,7 @@ namespace Persistencia
         {
             List<Categoria> categorias = new List<Categoria>();
 
-            var cmd = new SqlCommand("SELECT con.id, " +
-                                     "con.descricao, " +
-                                     "con.valor, " +
-                                     "con.tipo, " +
-                                     "con.data_vencimento, " +
-                                     "cat.id as Categoria_ID, " +
-                                     "cat.nome " +
-                                     "FROM dbo.contas con " +
-                                     "inner join dbo.categorias cat " +
-                                     "on con.categorias_id = cat.id", conn);
+            var cmd = new SqlCommand("select id, nome from categorias", conn);
             conn.Open();
 
             using (SqlDataReader rd = cmd.ExecuteReader())
