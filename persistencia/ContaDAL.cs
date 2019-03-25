@@ -24,7 +24,7 @@ namespace Persistencia
         {
             List<Conta> contas = new List<Conta>();
 
-            var cmd = new SqlCommand("SELECT con.id, con.descricao, con.valor, con.tipo, con.data_vencimento, cat.id as Categoria_ID, cat.nome FROM dbo.conta con inner join dbo.categoria cat on con.categoria_id = cat.id", conn);
+            var cmd = new SqlCommand("SELECT con.id, con.descricao, con.valor, con.tipo, con.data_vencimento, cat.id as Categoria_ID, cat.nome FROM dbo.contas con inner join dbo.categorias cat on con.categorias_id = cat.id", conn);
             conn.Open();
 
             using (SqlDataReader rd = cmd.ExecuteReader())
@@ -35,7 +35,7 @@ namespace Persistencia
                     {
                         Id = Convert.ToInt32(rd["id"].ToString()),
                         Descricao = rd["descricao"].ToString(),
-                        Tipo = rd["tipo"].ToString(),
+                        Tipo = Convert.ToChar(rd["tipo"].ToString()),
                         Valor = Convert.ToDouble(rd["valor"].ToString())
                     };
 

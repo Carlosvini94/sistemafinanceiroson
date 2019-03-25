@@ -17,3 +17,17 @@ C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\ob
 C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CopyComplete
 C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.dll
 C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.deps.json
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Persistencia.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Db.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Modelo.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Db.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\bin\Debug\netcoreapp2.1\Modelo.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csprojAssemblyReference.cache
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfoInputs.cache
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.AssemblyInfo.cs
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.csproj.CopyComplete
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\Persistencia\obj\Debug\netcoreapp2.1\Persistencia.pdb

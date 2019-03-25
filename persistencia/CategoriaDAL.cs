@@ -16,15 +16,18 @@ namespace Persistencia
         public Categoria GetCategoria(int id)
         {
             Categoria categoria = new Categoria();
-            var cmd = new SqlCommand("SELECT id, nome FROM dbo.categoria where id = @id", conn);
+            var cmd = new SqlCommand("SELECT id, nome FROM dbo.categorias where id = @id", conn);
             cmd.Parameters.AddWithValue("@id", id);
             conn.Open();
 
             using (SqlDataReader rd = cmd.ExecuteReader())
             {
-                rd.Read();
-                categoria.Id = Convert.ToInt32(rd["id"].ToString());
-                categoria.Nome = rd["nome"].ToString();
+                while (rd.Read())
+                {
+                    categoria.Id = Convert.ToInt32(rd["id"].ToString());
+                    categoria.Nome = rd["nome"].ToString();
+                }
+                
                 
             }
 

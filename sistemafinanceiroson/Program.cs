@@ -45,7 +45,7 @@ namespace SistemaFinanceiroSoN
                 else
                 {
                     Clear();
-                    
+
                     uteis.Executar(opc);
                 }
 

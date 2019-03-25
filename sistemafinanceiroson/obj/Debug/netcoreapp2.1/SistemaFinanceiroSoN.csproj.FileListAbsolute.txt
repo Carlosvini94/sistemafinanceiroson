@@ -24,3 +24,21 @@ C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\SistemaFinancei
 C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Modelo.pdb
 C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Persistencia.pdb
 C:\Users\carlo\Documents\cursos_schoolofnet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.csproj.CopyComplete
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\SistemaFinanceiroSoN.deps.json
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\SistemaFinanceiroSoN.runtimeconfig.json
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\SistemaFinanceiroSoN.runtimeconfig.dev.json
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\SistemaFinanceiroSoN.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\SistemaFinanceiroSoN.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Db.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Modelo.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Persistencia.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Db.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Modelo.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\bin\Debug\netcoreapp2.1\Persistencia.pdb
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.csprojAssemblyReference.cache
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.csproj.CoreCompileInputs.cache
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.AssemblyInfoInputs.cache
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.AssemblyInfo.cs
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.csproj.CopyComplete
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.dll
+C:\Users\10043718612\Documents\Cursos SchoolOfNet\SistemaFinanceiroSoN\SistemaFinanceiroSoN\obj\Debug\netcoreapp2.1\SistemaFinanceiroSoN.pdb
