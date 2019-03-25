@@ -24,7 +24,16 @@ namespace Persistencia
         {
             List<Conta> contas = new List<Conta>();
 
-            var cmd = new SqlCommand("SELECT con.id, con.descricao, con.valor, con.tipo, con.data_vencimento, cat.id as Categoria_ID, cat.nome FROM dbo.contas con inner join dbo.categorias cat on con.categorias_id = cat.id", conn);
+            var cmd = new SqlCommand("SELECT con.id, " +
+                                     "con.descricao, " +
+                                     "con.valor, " +
+                                     "con.tipo, " +
+                                     "con.data_vencimento, " +
+                                     "cat.id as Categoria_ID, " +
+                                     "cat.nome " +
+                                     "FROM dbo.contas con " +
+                                     "inner join dbo.categorias cat " +
+                                     "on con.categorias_id = cat.id", conn);
             conn.Open();
 
             using (SqlDataReader rd = cmd.ExecuteReader())
@@ -47,6 +56,41 @@ namespace Persistencia
             }
 
             return contas;
+
+        }
+
+        public void Salvar(Conta conta)
+        {
+            if(conta.Id == null)
+            {
+                Cadastrar(conta);
+            }
+            else
+            {
+                Editar(conta);
+            }
+        }
+
+        void Cadastrar (Conta conta)
+        {
+            this.conn.Open();
+            SqlCommand cmd = this.conn.CreateCommand();
+            cmd.CommandText = "insert into contas(descricao, tipo, valor, data_vencimento, categorias_id) " +
+                              "values (@descricao, @tipo, @valor, @data_vencimento, @categorias_id)";
+
+            cmd.Parameters.AddWithValue("@descricao", conta.Descricao);
+            cmd.Parameters.AddWithValue("@tipo", conta.Tipo);
+            cmd.Parameters.AddWithValue("@valor", conta.Valor);
+            cmd.Parameters.AddWithValue("@data_vencimento", conta.DataVencimento);
+            cmd.Parameters.AddWithValue("@categorias_id", conta.Categoria.Id);
+
+            cmd.ExecuteNonQuery();
+
+            this.conn.Close();
+        }
+
+        void Editar(Conta conta)
+        {
 
         }
     }

@@ -231,6 +231,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "PortableConsoleLibs/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/PortableConsoleLibs.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/PortableConsoleLibs.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -915,6 +924,18 @@
         "netstandard.library.nuspec"
       ]
     },
+    "PortableConsoleLibs/1.0.0": {
+      "sha512": "GK+rHJdxJYTgNh5CnwLtqfM/HbdnBRi/KJYiDtPitNAk/VUmLH8Hz9l8CToTVa0w0WA1LEuROFrbcQhzdWzDVw==",
+      "type": "package",
+      "path": "portableconsolelibs/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/PortableConsoleLibs.dll",
+        "portableconsolelibs.1.0.0.nupkg.sha512",
+        "portableconsolelibs.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.5.0": {
       "sha512": "AJfX7owAAkMjWQYhoml5IBfXh8UyYPjktn8pK0BFGAdKgBS7HqMz1fw5vdzfZUWfhtTPDGCjgNttt46ZyEmSjg==",
       "type": "package",
@@ -1231,6 +1252,7 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Modelo >= 1.0.0",
       "Persistencia >= 1.0.0",
+      "PortableConsoleLibs >= 1.0.0",
       "System.Data.SqlClient >= 4.6.0"
     ]
   },
@@ -1289,6 +1311,10 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "PortableConsoleLibs": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
