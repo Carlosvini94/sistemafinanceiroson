@@ -24,16 +24,14 @@ namespace Persistencia
         {
             List<Conta> contas = new List<Conta>();
 
-            var cmd = new SqlCommand("SELECT con.id, " +
-                                     "con.descricao, " +
-                                     "con.valor, " +
-                                     "con.tipo, " +
-                                     "con.data_vencimento, " +
-                                     "cat.id as Categoria_ID, " +
-                                     "cat.nome " +
-                                     "FROM dbo.contas con " +
-                                     "inner join dbo.categorias cat " +
-                                     "on con.categorias_id = cat.id", conn);
+            StringBuilder sql = new StringBuilder("select ");
+            sql.Append("con.id, con.descricao, con.valor, con.tipo, con.data_vencimento, cat.id as Categoria_ID ");
+            sql.Append("from contas con ");
+            sql.Append("inner join dbo.categorias cat ");
+            sql.Append("on con.categorias_id = cat.id ");
+
+            var cmd = new SqlCommand(sql.ToString(), conn);
+
             conn.Open();
 
             using (SqlDataReader rd = cmd.ExecuteReader())
@@ -45,7 +43,8 @@ namespace Persistencia
                         Id = Convert.ToInt32(rd["id"].ToString()),
                         Descricao = rd["descricao"].ToString(),
                         Tipo = Convert.ToChar(rd["tipo"].ToString()),
-                        Valor = Convert.ToDouble(rd["valor"].ToString())
+                        Valor = Convert.ToDouble(rd["valor"].ToString()),
+                        DataVencimento = Convert.ToDateTime(rd["data_vencimento"].ToString())
                     };
 
                     int id_categoria = Convert.ToInt32(rd["id"].ToString());
@@ -54,9 +53,60 @@ namespace Persistencia
                     contas.Add(conta);
                 }
             }
+            conn.Close();
 
             return contas;
+        }
 
+        public List<Conta> ListarTodos(string data_inicial = "", string data_final = "")
+        {
+            List<Conta> contas = new List<Conta>();
+
+            StringBuilder sql = new StringBuilder("select ");
+            sql.Append("con.id, con.descricao, con.valor, con.tipo, con.data_vencimento, cat.id as Categoria_ID ");
+            sql.Append("from contas con ");
+            sql.Append("inner join dbo.categorias cat ");
+            sql.Append("on con.categorias_id = cat.id ");
+
+
+            if (!(data_inicial == "") && !(data_final == ""))
+            {
+                sql.Append("where con.data_vencimento between ");
+                sql.Append("@data_inicial and @data_final ");
+            }
+
+            var cmd = new SqlCommand(sql.ToString(), conn);
+
+            if (!(data_inicial == "") && !(data_final == ""))
+            {
+                cmd.Parameters.AddWithValue("@data_inicial", data_inicial);
+                cmd.Parameters.AddWithValue("@data_final", data_final);
+            }
+
+            conn.Open();
+
+            using (SqlDataReader rd = cmd.ExecuteReader())
+            {
+                while (rd.Read())
+                {
+                    Conta conta = new Conta()
+                    {
+                        Id = Convert.ToInt32(rd["id"].ToString()),
+                        Descricao = rd["descricao"].ToString(),
+                        Tipo = Convert.ToChar(rd["tipo"].ToString()),
+                        Valor = Convert.ToDouble(rd["valor"].ToString()),
+                        DataVencimento = Convert.ToDateTime(rd["data_vencimento"].ToString())
+                    };
+
+                    int id_categoria = Convert.ToInt32(rd["id"].ToString());
+                    conta.Categoria = categoria.GetCategoria(id_categoria);
+
+                    contas.Add(conta);
+                }
+            }
+            conn.Close();
+
+            return contas;
         }
 
         public void Salvar(Conta conta)

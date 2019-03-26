@@ -16,7 +16,8 @@ namespace SistemaFinanceiroSoN
 
         private ContaDAL contaDal;
         private CategoriaDAL categoriaDal;
-        
+        ConsoleTable table;
+
         public Uteis()
         {
             string strConn = Db.Conexao.GetStringConnection();
@@ -49,20 +50,15 @@ namespace SistemaFinanceiroSoN
 
         public void Executar(int opc)
         {
+            
+
             switch (opc)
             {
                 case 1:
                     Title = "Listagem de Contas - CONTROLE FINANCEIRO";
                     MontaHearder("Listagem de Contas");
 
-                    ConsoleTable table = new ConsoleTable("Id", "Descrição","Tipo", "Valor");
-
-                    foreach (var c in contaDal.ListarTodos())
-                    {
-                        table.AddRow(c.Id, c.Descricao, c.Tipo.Equals('R') ? "Receber" : "Pagar", String.Format("{0:c}", c.Valor));
-                    }
-
-                    table.Write();
+                    ListarContas(contaDal.ListarTodos());
 
                     ReadLine();
                     Clear();
@@ -72,76 +68,129 @@ namespace SistemaFinanceiroSoN
                     Title = "Nova Contas - CONTROLE FINANCEIRO";
                     MontaHearder("Cadastrar Nova Contas");
 
-                    string descricao = "";
-
-                    do
-                    {
-                        Write("Informe a descrição da Conta: ");
-                        descricao = ReadLine();
-
-                        if (descricao.Equals(""))
-                        {
-                            BackgroundColor = ConsoleColor.Red;
-                            ForegroundColor = ConsoleColor.White;
-                            Uteis.MontaHearder("Informe Uma Descrição",'*',28);
-                            ResetColor();
-                        }
-
-                    } while (descricao.Equals(""));
-
-                    Write("Informe o valor: ");
-                    double valor = Convert.ToDouble(ReadLine());
-
-                    WriteLine("informe o Tipo da Conta ('R' = Receber / 'P' = Pagar): ");
-                    char tipo = Convert.ToChar(ReadLine());
-
-                    Write("Informe data de Vencimento (dd/mm/aaaa): ");
-                    DateTime dataVencimento = DateTime.Parse(ReadLine());
-
-                    WriteLine("Selecione uma categoria pela ID: \n");
-                    categoriaDal.ListarTodos();
-
-                    table = new ConsoleTable("Id", "Nome");
-
-                    foreach (var cat in categoriaDal.ListarTodos())
-                    {
-                        table.AddRow(cat.Id, cat.Nome);
-                    }
-
-                    table.Write();
-
-                    Write("Categoria: ");
-                    int catId = Convert.ToInt32(ReadLine());
-
-                    Categoria categoria_cadastro = categoriaDal.GetCategoria(catId);
-
-                    Conta conta = new Conta()
-                    {
-                        Descricao = descricao,
-                        Valor = valor,
-                        Tipo = tipo,
-                        DataVencimento = dataVencimento,
-                        Categoria = categoria_cadastro
-                    };
-
-                    contaDal.Salvar(conta);
-
-                    BackgroundColor = ConsoleColor.DarkGreen;
-                    ForegroundColor = ConsoleColor.White;
-                    MontaHearder("SALVO COM SUCESSO", '+', 30);
-                    ResetColor();
+                    CadastrarConta();
 
                     ReadLine();
                     Clear();
 
                     break;
                 case 3:
+                    Title = "Editar Contas - CONTROLE FINANCEIRO";
+                    MontaHearder("Edidar Contas");
+                    WriteLine("Editar");
+
+                    ReadLine();
+                    Clear();
                     break;
                 case 4:
+                    Title = "Excluir Contas - CONTROLE FINANCEIRO";
+                    MontaHearder("Excluir Contas");
+                    WriteLine("Excluir");
+
+                    ReadLine();
+                    Clear();
                     break;
                 case 5:
+                    Title = "Relatorio de Contas - CONTROLE FINANCEIRO";
+                    MontaHearder("Relatorio de Conta Por Data de Vencimento");
+
+                    WriteLine("Informe a Data Incial (dd/mm/aaa):");
+                    string data_inicial = ReadLine();
+                    //DateTime data_inicial = Convert.ToDateTime(ReadLine());
+
+                    WriteLine("Informe a Data Final (dd/mm/aaa):");
+                    string data_final = ReadLine();
+                    //DateTime data_final = Convert.ToDateTime(ReadLine());
+
+                    table = new ConsoleTable("Id", "Descrição", "Tipo", "Valor", "Data Vencimento");
+
+                    foreach (var c in contaDal.ListarTodos(data_inicial, data_inicial))
+                    {
+                        table.AddRow(c.Id, c.Descricao, c.Tipo.Equals('R') ? "Receber" : "Pagar",
+                            String.Format("{0:c}", c.Valor), String.Format("{0:dd/MM/yyyy}", c.DataVencimento));
+                    }
+
+                    table.Write();
+
+                    ReadLine();
+                    Clear();
                     break;
             }
+        }
+
+        void ListarContas(List<Conta> contas)
+        {
+            table = new ConsoleTable("Id", "Descrição", "Tipo", "Valor", "Data Vencimento");
+
+            foreach (var c in contas)
+            {
+                table.AddRow(c.Id, c.Descricao, c.Tipo.Equals('R') ? "Receber" : "Pagar",
+                    String.Format("{0:c}", c.Valor), String.Format("{0:dd/MM/yyyy}", c.DataVencimento));
+            }
+
+            table.Write();
+        }
+        
+        void CadastrarConta()
+        {
+            string descricao = "";
+
+            do
+            {
+                Write("Informe a descrição da Conta: ");
+                descricao = ReadLine();
+
+                if (descricao.Equals(""))
+                {
+                    BackgroundColor = ConsoleColor.Red;
+                    ForegroundColor = ConsoleColor.White;
+                    MontaHearder("Informe Uma Descrição", '*', 28);
+                    ResetColor();
+                }
+
+            } while (descricao.Equals(""));
+
+            Write("Informe o valor: ");
+            double valor = Convert.ToDouble(ReadLine());
+
+            WriteLine("informe o Tipo da Conta ('R' = Receber / 'P' = Pagar): ");
+            char tipo = Convert.ToChar(ReadLine());
+
+            Write("Informe data de Vencimento (dd/mm/aaaa): ");
+            DateTime dataVencimento = DateTime.Parse(ReadLine());
+
+            WriteLine("Selecione uma categoria pela ID: \n");
+            categoriaDal.ListarTodos();
+
+            table = new ConsoleTable("Id", "Nome");
+
+            foreach (var cat in categoriaDal.ListarTodos())
+            {
+                table.AddRow(cat.Id, cat.Nome);
+            }
+
+            table.Write();
+
+            Write("Categoria: ");
+            int catId = Convert.ToInt32(ReadLine());
+
+            Categoria categoria_cadastro = categoriaDal.GetCategoria(catId);
+
+            Conta conta = new Conta()
+            {
+                Descricao = descricao,
+                Valor = valor,
+                Tipo = tipo,
+                DataVencimento = dataVencimento,
+                Categoria = categoria_cadastro
+            };
+
+            contaDal.Salvar(conta);
+
+            BackgroundColor = ConsoleColor.DarkGreen;
+            ForegroundColor = ConsoleColor.White;
+            MontaHearder("SALVO COM SUCESSO", '+', 30);
+            ResetColor();
         }
     }
 }
