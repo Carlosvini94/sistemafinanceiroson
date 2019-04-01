@@ -69,7 +69,7 @@ namespace Persistencia
             sql.Append("on con.categorias_id = cat.id ");
 
 
-            if (!(data_inicial == "") && !(data_final == ""))
+            if (!data_inicial.Equals("") && !data_final.Equals(""))
             {
                 sql.Append("where con.data_vencimento between ");
                 sql.Append("@data_inicial and @data_final ");
@@ -77,7 +77,7 @@ namespace Persistencia
 
             var cmd = new SqlCommand(sql.ToString(), conn);
 
-            if (!(data_inicial == "") && !(data_final == ""))
+            if (!data_inicial.Equals("") && !data_final.Equals(""))
             {
                 cmd.Parameters.AddWithValue("@data_inicial", data_inicial);
                 cmd.Parameters.AddWithValue("@data_final", data_final);
